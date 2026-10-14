@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Information and privacy policy for the private, owner-operated Voltic Partaker Backup application.">
+<title>Voltic Partaker Backup</title>
+<style>
+:root{color-scheme:light dark;--bg:light-dark(#f8fafb,#101820);--fg:light-dark(#172b38,#edf3f5);--muted:light-dark(#425866,#b9cbd5);--line:light-dark(#c8d5dd,#40535f);--accent:light-dark(#15536c,#8dd0e9);--text-base:clamp(1rem,.95rem + .25vw,1.125rem);--text-sm:clamp(.875rem,.8rem + .35vw,1rem);--text-lg:clamp(1.125rem,1rem + .75vw,1.5rem);--text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);--s1:.25rem;--s2:.5rem;--s4:1rem;--s6:1.5rem;--s8:2rem;--s12:3rem;--s16:4rem}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font-family:ui-sans-serif,system-ui,sans-serif;font-size:var(--text-base);line-height:1.65}main{max-width:76ch;margin:auto;padding:var(--s16) var(--s6)}header{border-bottom:1px solid var(--line);padding-bottom:var(--s8);margin-bottom:var(--s12)}.mark{display:block;width:36px;height:36px;color:var(--accent);margin-bottom:var(--s6)}h1{font-size:var(--text-xl);line-height:1.2;margin:0 0 var(--s6);font-weight:700;letter-spacing:-.03em}h2{font-size:var(--text-lg);line-height:1.35;margin:0 0 var(--s6)}p{margin:0 0 var(--s6);color:var(--muted)}section{margin-bottom:var(--s12);scroll-margin-top:var(--s8)}nav{display:flex;gap:var(--s6);flex-wrap:wrap;font-size:var(--text-sm);margin-top:var(--s6)}a{color:var(--accent);text-underline-offset:var(--s1)}a:focus-visible{outline:2px solid var(--accent);outline-offset:var(--s1)}footer{border-top:1px solid var(--line);padding-top:var(--s6)}button{font:inherit;font-size:var(--text-sm);color:var(--fg);background:transparent;border:1px solid var(--line);border-radius:var(--s1);padding:var(--s2) var(--s4);cursor:pointer}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<svg class="mark" viewBox="0 0 40 40" role="img" aria-label="Voltic archive mark" fill="none"><path d="M6 9h28v22H6zM12 15h16M12 21h10M12 27h16" stroke="currentColor" stroke-width="2"/></svg>
+<h1>Voltic Partaker Backup</h1>
+<p>Voltic Partaker Backup is a private, owner-operated application designed to transfer onboard camera, received-radio, radar, vessel-contact, and telemetry recordings to the owner's Google Drive account.</p>
+<nav aria-label="Page sections"><a href="#privacy">Privacy policy</a><a href="#terms">Operating terms</a></nav>
+</header>
+<section id="privacy" aria-labelledby="privacy-title">
+<h2 id="privacy-title">Privacy policy</h2>
+<p>The application requests access only to Google Drive files it creates or files explicitly selected for it. It does not request access to Gmail or the entire contents of Google Drive.</p>
+<p>Backup files contain recordings, timestamps, manifests, and integrity checksums. These files are stored privately in the owner's Google Drive account. The application does not sell this data, use it for advertising, or deliberately share it with outside recipients.</p>
+<p>Google authorization credentials remain on the owner's onboard computer in restricted-access files. The owner can revoke authorization through their Google Account settings.</p>
+<p>Cloud recordings are not automatically deleted. Local recordings older than 24 hours may be removed only after the corresponding cloud copy has passed integrity verification. Unverified recordings are retained locally.</p>
+<p>Contact: <a href="mailto:prossercathey@gmail.com">prossercathey@gmail.com</a>.</p>
+</section>
+<section id="terms" aria-labelledby="terms-title">
+<h2 id="terms-title">Operating terms</h2>
+<p>This application is for the owner's private recording archive, not a public backup service. The owner controls its configuration, Google authorization, and cloud files. The application does not control vessel navigation or sensor operation.</p>
+</section>
+<footer><button type="button" id="theme" aria-label="Switch light and dark appearance">Change appearance</button></footer>
+</main>
+<script>
+document.querySelector('#theme').addEventListener('click',()=>{const dark=window.matchMedia('(prefers-color-scheme:dark)').matches;const current=document.documentElement.style.colorScheme|| (dark?'dark':'light');document.documentElement.style.colorScheme=current==='dark'?'light':'dark'});
+</script>
+</body>
+</html>
